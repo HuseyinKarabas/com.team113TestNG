@@ -23,16 +23,16 @@ public class C03_DependsOnMethods {
     "No tests were found" yazar ve hic bir test method'u calismaz
      */
 
-    @Test
+    @Test (dependsOnMethods = "wiseTesti")
     public void youtubeTesti(){
         System.out.println("Youtube");
         Assert.assertTrue(8==8);  //failed
     }
-    @Test(priority = 3)
+    @Test
     public void wiseTesti(){
         System.out.println("Wise Quarter");
     }
-    @Test(dependsOnMethods = "youtubeTesti")
+    @Test (priority = 1)
     public void amazonTesti(){ //priority yazilmazsa 0 degeri alir
         System.out.println("Amazon");
     }

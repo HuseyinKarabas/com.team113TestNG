@@ -5,7 +5,7 @@ public class C02_Ignore {
      /*
      @Ignore notasyonu basina yazdigi testin Ignore edilmesini saglar
      */
-    @Test
+    @Test @Ignore
     public void youtubeTesti(){
         System.out.println("Youtube");
     }
