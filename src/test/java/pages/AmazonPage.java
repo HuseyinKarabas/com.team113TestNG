@@ -1,5 +1,7 @@
 package pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
@@ -14,7 +16,7 @@ public class AmazonPage {
     PageFactory class'indan initElements() kullanilir.
      */
 
-    AmazonPage(){
+    public AmazonPage(){
         PageFactory.initElements(Driver.getDriver(),this);
         /*
         Bu ayari constructor icine koyma sebebimiz:
@@ -24,4 +26,9 @@ public class AmazonPage {
         gerekli ayari yapmiş olacak.
          */
     }
+    @FindBy(id="twotabsearchtextbox")
+    public WebElement aramaKutusu;
+
+    @FindBy(xpath="(//div[@class='sg-col-inner'])[1]")
+    public WebElement aramaSonucuElementi;
 }
