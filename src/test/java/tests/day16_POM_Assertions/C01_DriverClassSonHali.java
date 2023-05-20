@@ -7,7 +7,6 @@ import utilities.ReusableMethods;
 public class C01_DriverClassSonHali {
 
     //3 tane test methodu olusturalim
-
     //1. method'da amazon'a gidip, url'nin amazon icerdigini test edin
     @Test
     public void amazonTest(){
@@ -18,11 +17,11 @@ public class C01_DriverClassSonHali {
         ReusableMethods.bekle(3);
         Driver.closeDriver();
     }
-    //2. method'da Wisequarter anasayfaya gidip, title'in wisequarter icerdigini test edin
+    //2. method'da Wisequarter anasayfaya gidip, title'in Wise Quarter icerdigini test edin
     @Test
     public void wiseTest(){
         Driver.getDriver().get(ConfigReader.getProperty("wiseUrl"));
-        String expectedIcerik="wisequarter";
+        String expectedIcerik="Wise Quarter";
         String actualTitle=Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(expectedIcerik));
         ReusableMethods.bekle(3);
@@ -32,12 +31,11 @@ public class C01_DriverClassSonHali {
     @Test
     public void facebookTest(){
         Driver.getDriver().get(ConfigReader.getProperty("faceUrl"));
-        String expectedIcerik="facebook";
+        String expectedIcerik="Facebook";
         String actualTitle=Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(expectedIcerik));
         ReusableMethods.bekle(3);
         Driver.closeDriver();
     }
-
     //her method'da yeni driver olusturup method sonunda driver'i kapatin
 }
