@@ -6,7 +6,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 public class C05_QualitydemyLoginTesti {
-    @Test
+    @Test(groups = "smoke")
     public void test01(){
     //Qualitydemy ana sayfaya gidin
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
