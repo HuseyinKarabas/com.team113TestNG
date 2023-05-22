@@ -34,7 +34,7 @@ public class C02_SingletonPattern {
         Driver class'indaki constructor'i private yapinca kimse Driver
         class'indan obje olusturamaz.
          */
-        System.out.println(Driver.driver);
+       // System.out.println(Driver.driver);
 
 
     }
