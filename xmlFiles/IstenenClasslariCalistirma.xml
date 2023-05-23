@@ -9,7 +9,7 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Istenen class2lari calistirma">
+<suite name="Istenen class'lari calistirma">
 
     <test name="smokeTest">
 
